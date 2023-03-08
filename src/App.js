@@ -7,7 +7,6 @@ import { useState, useEffect } from 'react';
   const [selectedCarModel, setSelectedCarModel] = useState(null);
 
   useEffect(() => {
-    // Fetch car types from API
     fetch("https://server.sakshambhatt1.repl.co/car-type-options")
       .then(response => response.json())
       .then(data => {
@@ -19,7 +18,6 @@ import { useState, useEffect } from 'react';
 
   useEffect(() => {
     if (selectedCarType) {
-      // Fetch car models for the selected car type from API
       fetch(`https://server--sakshambhatt1.repl.co//car-options/suv${selectedCarType.id}`)
         .then(response => response.json())
         .then(data => {
