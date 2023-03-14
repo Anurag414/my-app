@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react';
   const [selectedCarModel, setSelectedCarModel] = useState(null);
 
   useEffect(() => {
-    fetch("https://server.sakshambhatt1.repl.co/car-type-options")
+    fetch("")
       .then(response => response.json())
       .then(data => {
         setCarTypes(data);
@@ -18,7 +18,7 @@ import { useState, useEffect } from 'react';
 
   useEffect(() => {
     if (selectedCarType) {
-      fetch(`https://server--sakshambhatt1.repl.co//car-options/suv${selectedCarType.id}`)
+      fetch(`${selectedCarType.id}`)
         .then(response => response.json())
         .then(data => {
           setCarModels(data);
